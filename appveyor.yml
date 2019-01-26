@@ -11,10 +11,10 @@ build_script:
 
 #test_script:
   # run the unit tests (requires changing into the test directory)
- # - cmd: cd tests
-#- cmd: dotnet nunit
+- cmd: cd C:\projects\appveyor-netcore\NUnitTestProject1\NUnitTestProject1.csproj
+- cmd: dotnet nunit
 
-cmd: donet OpenCover.Console.exe 
+#cmd: donet OpenCover.Console.exe 
 #-register:user -target:".\packages\xunit.runner.console.2.4.1\tools\net471\xunit.console.x86.exe" -targetargs:".\UnitTests\bin\Debug\UnitTests.dll -noshadow" -filter:"+[LeedCodeLib*]* -[UnitTests*]*" -output:".\MyProject_coverage.xml"
 
 #.\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -target:".\packages\xunit.runner.console.2.4.1\tools\net471\xunit.console.x86.exe" -targetargs:".\UnitTests\bin\Debug\UnitTests.dll -noshadow" -filter:"+[LeedCodeLib*]* -[UnitTests*]*" -output:".\MyProject_coverage.xml"
