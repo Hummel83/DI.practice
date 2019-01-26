@@ -8,9 +8,11 @@ build_script:
     - cmd: dotnet pack -p:PackageVersion=%APPVEYOR_BUILD_VERSION%
     - cmd: dotnet pack -c Release -p:PackageVersion=%APPVEYOR_BUILD_VERSION%
 
-#.\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -target:".\packages\xunit.runner.console.2.4.1\tools\net471\xunit.console.x86.exe" -targetargs:".\UnitTests\bin\Debug\UnitTests.dll -noshadow" -filter:"+[LeedCodeLib*]* -[UnitTests*]*" -output:".\MyProject_coverage.xml"
 
 #test_script:
+- cmd dotnet test
 
-#upload report
+#.\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -target:".\packages\xunit.runner.console.2.4.1\tools\net471\xunit.console.x86.exe" -targetargs:".\UnitTests\bin\Debug\UnitTests.dll -noshadow" -filter:"+[LeedCodeLib*]* -[UnitTests*]*" -output:".\MyProject_coverage.xml"
+
+#upload_report
 #- .\packages\Codecov.1.1.0\tools\codecov.exe -f "MyProject_coverage.xml"
